@@ -1,0 +1,28 @@
+<!-- templates/your_app/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Site{% endblock %}</title>
+
+    <!-- Load static files -->
+    {% load static %}
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+<body>
+
+    <!-- Common Header -->
+    <header>
+        <h1>Welcome to My Site</h1>
+    </header>
+
+    <!-- Page content will be injected here -->
+    {% block content %}{% endblock %}
+
+    <!-- Load JavaScript -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
